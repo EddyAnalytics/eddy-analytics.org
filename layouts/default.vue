@@ -1,59 +1,62 @@
 <template>
   <div>
-    <nav
-      class="navbar header has-shadow is-primary"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          <img src="~assets/buefy.png" alt="Buefy" height="28" />
-        </a>
-
-        <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
+    <b-navbar fixed-top>
+      <template #brand>
+        <b-navbar-item tag="router-link" :to="{ name: 'index' }">
+          <img
+            src="@/assets/img/logo-brand.svg"
+            alt="Eddy Data Analytics logo"
+          />
+        </b-navbar-item>
+      </template>
+      <template #start></template>
+      <template #end>
+        <b-button type="is-primary" class="m-2" @click="goToDemoApp()">
+          Try our demo
+        </b-button>
+      </template>
+    </b-navbar>
+    <nuxt />
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <div>Partners</div>
+            <a href="https://www.elnino.tech" target="_blank">
+              <img
+                src="@/assets/img/elnino-logo-white.svg"
+                alt="El Niño"
+                title="El Niño"
+                height="50"
+                width="150"
+              />
+            </a>
+          </div>
+          <div class="column has-text-right">
+            &copy; {{ new Date().getFullYear() }} Eddy Analytics
+          </div>
         </div>
       </div>
-    </nav>
-
-    <section class="main-content columns">
-      <aside class="column is-2 section">
-        <p class="menu-label is-hidden-touch">General</p>
-        <ul class="menu-list">
-          <li v-for="(item, key) of items" :key="key">
-            <nuxt-link :to="item.to" exact-active-class="is-active">
-              <b-icon :icon="item.icon" /> {{ item.title }}
-            </nuxt-link>
-          </li>
-        </ul>
-      </aside>
-
-      <div class="container column is-10">
-        <nuxt />
-      </div>
-    </section>
+    </footer>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      items: [
-        {
-          title: 'Home',
-          icon: 'home',
-          to: { name: 'index' },
-        },
-        {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' },
-        },
-      ],
-    }
-  },
-}
+export default {}
 </script>
+
+<style lang="scss" scoped>
+.navbar {
+  box-shadow: 0 2px 0 0 whitesmoke;
+
+  .navbar-item.is-active {
+    font-weight: 500;
+  }
+}
+</style>
+
+<style lang="scss">
+.footer {
+  flex: 1;
+}
+</style>

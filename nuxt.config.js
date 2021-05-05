@@ -17,7 +17,13 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    '@/assets/scss/bulma.scss',
+    '@/assets/scss/theme.scss',
+    '@/assets/scss/mixins.scss',
+    '@/assets/scss/spacing.scss',
+    '@/assets/scss/gradients.scss',
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -40,7 +46,9 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
   ],
-
+  buefy: {
+    css: false,
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 

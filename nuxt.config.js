@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'eddy-analytics.org',
+    title: 'Eddy Analytics - Unified Streaming Data Analytics',
     htmlAttrs: {
       lang: 'en',
     },

@@ -124,7 +124,7 @@ export default {
   data() {
     return {
       ORGANIZATION_URL: 'https://github.com/EddyAnalytics',
-      DEMO_APP_URL: 'https://app.eddy-analytics.org',
+      DEMO_APP_URL: 'https://app.eddy-analytics.org/auth',
     }
   },
   methods: {

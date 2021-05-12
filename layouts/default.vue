@@ -42,7 +42,18 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      DEMO_APP_URL: 'https://app.eddy-analytics.org/auth',
+    }
+  },
+  methods: {
+    goToDemoApp() {
+      window.open(this.DEMO_APP_URL, '_blank')
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -53,9 +64,6 @@ export default {}
     font-weight: 500;
   }
 }
-</style>
-
-<style lang="scss">
 .footer {
   flex: 1;
 }

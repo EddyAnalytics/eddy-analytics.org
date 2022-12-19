@@ -41,7 +41,7 @@
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
     "prettier": "^2.5.1",
-    "sass": "^1.49.10",
+    "sass": "^1.57.0",
     "sass-loader": "10"
   }
 }
